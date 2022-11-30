@@ -9,5 +9,84 @@
 </head>
 <body>
   <h1>hello world</h1>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <p><strong>Find the right model: </strong>Select one or more checkboxes to filter your choice:</p>
+  
+  
+  <table id="filters" width="620px">
+      <tr>
+          <td width="144" align="left" valign="top">
+              <input type="checkbox" class="brand" value="Audi" id="filter-Audi">Audi<br>
+              <input type="checkbox" class="brand" value="BMW" id="filter-BMW">BMW<br>
+          </td>
+          <td width="233" align="left" valign="top">
+              <input type="checkbox" class="project-type" value="Advertisement" id="filter-Advertisement">Advertisement<br>
+              <input type="checkbox" class="project-type" value="Art" id="filter-Art">Album Art<br>
+              <input type="checkbox" class="project-type" value="Poster" id="filter-Poster">Poster<br>
+              <input type="checkbox" class="project-type" value="Layout" id="filter-Layout">Album Layout<br>
+          </td>
+          <td width="233" align="left" valign="top">
+              <input type="checkbox" class="year" value="2022" id="filter-2022">2022<br>
+              <input type="checkbox" class="year" value="2021" id="filter-2021">2021<br>
+              <input type="checkbox" class="year" value="2020" id="filter-2020">2020<br>
+              <input type="checkbox" class="year" value="2019" id="filter-2019">2019<br>
+          </td>
+      </tr>
+  </table>
+  
+  
+  <div class="text"></div>
+  <div id="log" style="width: 620px; line-height: 19px"></div>
+  
+  <!-- new Car 1 -->
+  
+  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="Audi Advertisement 2022">
+      <strong>Audi A1</strong><br />
+      Audi, Compact, silver, blue, red
+  </div>
+  <br />
+  
+  <!-- new Car 2 -->
+  
+  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="BMW Layout 2020">
+      <strong>BMW 118i</strong><br />
+      BMW Compact red white
+  </div>
+  <br />
+  
+  <!-- new Car 3 -->
+  
+  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="Audi Poster Art 2021">
+      <strong>Audi A4</strong><br />
+      Audi Limousine Sport silver blue red
+  </div>
+  <br />
+  
+  <!-- new Car 4 -->
+  
+  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="BMW SUV Advertisement 2019">
+      <strong>BMW X3</strong><br />
+      BMW SUV Sport white blue silver
+  </div>
+  <br />
+  
+  <!-- new Car 5 -->
+  
+  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="Audi Poster Layout 2022">
+      <strong>Audi R8</strong><br />
+      Audi Sport Silver
+  </div>
+  <br />
+  
+  <!-- new Car 6 -->
+  
+  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="BMW Art Layout 2020">
+      <strong>BMW Concept X</strong><br />
+      BMW Sport white silver blue
+  </div>
+  <br />
+
+  <script src="/app.js"></script>
 </body>
 </html>
