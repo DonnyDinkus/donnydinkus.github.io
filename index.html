@@ -4,88 +4,216 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./images/frame0.png" id="icon"/> 
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CRSV,MONO@-15..0,300..800,0..1,0..1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
   <title>Jon Samuels</title>
 </head>
 <body>
-  <h1>hello world</h1>
-
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <p><strong>Find the right model: </strong>Select one or more checkboxes to filter your choice:</p>
+  <header>
+    <div class="jon"><p class="logo-type">Jon Samuels</p><img class="logo" src="./images//logo1.png" alt="Jon s. express logo"/><a href="mailto:jon.r.samuels@gmail.com">jon.r.samuels@gmail.com</a></div>
+    <div id="filters" class="filter-list">
+          <div class="category-list">
+              <!-- <label class="selectit"><input type="checkbox" class="project-type" value="All" id="filter-All">All</label> -->
+              <label class="selectit"><input type="checkbox" class="project-type" value="Advertisement" id="filter-Advertisement">Advertisement</label>
+              <label class="selectit"><input type="checkbox" class="project-type" value="Art" id="filter-Art">Album Art</label>
+              <label class="selectit"><input type="checkbox" class="project-type" value="Poster" id="filter-Poster">Poster</label>
+              <label class="selectit"><input type="checkbox" class="project-type" value="Layout" id="filter-Layout">Layout</label>
+              <label class="selectit"><input type="checkbox" class="project-type" value="Text" id="filter-Text">Text Design</label>
+          </div>
+          <div class="year-list">
+              <label class="selectit"><input type="checkbox" class="year" value="2022" id="filter-2022">2022</label>
+              <label class="selectit"><input type="checkbox" class="year" value="2021" id="filter-2021">2021</label>
+              <label class="selectit"><input type="checkbox" class="year" value="2020" id="filter-2020">2020</label>
+              <label class="selectit"><input type="checkbox" class="year" value="2019" id="filter-2019">2019</label>
+              <span class="btn" onclick="lights()"><img class="lightbulb" id="button" src="images/lightbulb.png" alt="light bulb"></span>
+          </div>
+    </div>
+  </header>
   
-  
-  <table id="filters" width="620px">
-      <tr>
-          <td width="144" align="left" valign="top">
-              <input type="checkbox" class="brand" value="Audi" id="filter-Audi">Audi<br>
-              <input type="checkbox" class="brand" value="BMW" id="filter-BMW">BMW<br>
-          </td>
-          <td width="233" align="left" valign="top">
-              <input type="checkbox" class="project-type" value="Advertisement" id="filter-Advertisement">Advertisement<br>
-              <input type="checkbox" class="project-type" value="Art" id="filter-Art">Album Art<br>
-              <input type="checkbox" class="project-type" value="Poster" id="filter-Poster">Poster<br>
-              <input type="checkbox" class="project-type" value="Layout" id="filter-Layout">Album Layout<br>
-          </td>
-          <td width="233" align="left" valign="top">
-              <input type="checkbox" class="year" value="2022" id="filter-2022">2022<br>
-              <input type="checkbox" class="year" value="2021" id="filter-2021">2021<br>
-              <input type="checkbox" class="year" value="2020" id="filter-2020">2020<br>
-              <input type="checkbox" class="year" value="2019" id="filter-2019">2019<br>
-          </td>
-      </tr>
-  </table>
-  
-  
+  <img class="green" src="./images/green-line.png" alt="a green line" />
   <div class="text"></div>
   <div id="log" style="width: 620px; line-height: 19px"></div>
+  <div class="main">
+    <div class="image-grid">
+    
+      <div class="filterme" data-filter=" All Layout 2020">
+          <img class="myImages lazy" src="./images/img_1.jpeg" alt="Layout, JR Samuels 'Hand Like God' Cassette, 2020">
+      </div>
+    
+      <div class="filterme" data-filter=" All Art 2019">
+        <img class="myImages lazy" src="./images/img_2.jpg" alt="Art, JR Samuels 'In Brend', 2019">
+      </div>
+    
+      <div class="filterme" data-filter=" All Advertisement 2019">
+        <img class="myImages lazy" src="./images/img_3.png" alt="Advertisement, JR Samuels 'In Brend' Release Show, 2019">
+      </div>
+    
+      <div class="filterme" data-filter=" All Layout Art 2020">
+        <img class="myImages lazy" src="./images/img_4.png" alt="Album Art & Layout, Wes Tirey 'The Midwest Book of the Dead', 2020">
+      </div>
+    
+      <div class="filterme" data-filter=" All Art 2019">
+        <img class="myImages lazy" src="./images/img_5.png" alt="Album Art, Natalie Jane Hill 'Azalea', 2019">
+      </div>
+    
+      <div class="filterme" data-filter=" All Art 2020">
+        <img class="myImages lazy" src="./images/img_6.png" alt="Album Art, Bolomite Jr. 'Cold Feet', 2020">
+      </div>
   
-  <!-- new Car 1 -->
+      <div class="filterme" data-filter=" All Art 2020">
+        <img class="myImages lazy" src="./images/img_7.png" alt="Album, JR Samuels 'Hand Like God', 2020">
+      </div>
   
-  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="Audi Advertisement 2022">
-      <strong>Audi A1</strong><br />
-      Audi, Compact, silver, blue, red
+      <div class="filterme" data-filter=" All Advertisement 2021">
+        <img class="myImages lazy" src="./images/img_8.png" alt="Bumper Sticker, Dear Life Records, 2021">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster Advertisement 2021">
+        <img class="myImages lazy" src="./images/img_9.png" alt="Poster, Horse Jumper of Love, 2021">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2022">
+        <img class="myImages lazy" src="./images/img_10.png" alt="Poster, Friendship/MJ Lenderman, 2022">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2020">
+        <img class="myImages lazy" src="./images/img_11.png" alt="Poster, Friendship, 2020 (did not happen)">
+     </div>
+  
+      <div class="filterme" data-filter=" All Poster 2022">
+        <img class="myImages lazy" src="./images/img_12.png" alt="Poster, Friendship 'Love the Stranger' Release Show, 2022">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2020">
+        <img class="myImages lazy" src="./images/img_13.png" alt="Poster, Friendship, 2020 (did not happen)">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2019">
+        <img class="myImages lazy" src="./images/img_14.png" alt="Poster, Friendship, 2019">
+      </div>
+  
+      <div class="filterme" data-filter="All Poster 2022">
+        <img class="myImages lazy" src="./images/img_15.png" alt="Poster, Friendship/MJ Lenderman, 2022">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2022">
+        <img class="myImages lazy" src="./images/img_16.png" alt="Poster, Friendship/MJ Lenderman, 2022">
+      </div>
+  
+      <div class="filterme" data-filter=" All Advertisement 2020">
+        <img class="myImages lazy" src="./images/img_17.png" alt="Advertisement, Dear Life Records streaming festival, 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Layout 2019">
+        <img class="myImages lazy" src="./images/img_18.png" alt="Layout, DLR Bootleg Cassette Series, 2019">
+      </div>
+      <div class="filterme" data-filter=" All Art 2020">
+        <img class="myImages lazy" src="./images/img_19.png" alt="Album Art, Joan Kelsey 'House of Mercy', 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2022">
+        <img class="myImages lazy" src="./images/img_20.png" alt="Poster, Friendship tour with Indigo de Souza, 2022">
+      </div>
+  
+      <div class="filterme" data-filter=" All Layout 2020">
+        <img class="myImages lazy" src="./images/img_21.png" alt="Layout, DLR Bootleg Cassette Series, 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Art Layout 2020">
+        <img class="myImages lazy" src="./images/img_22.png" alt="Album Art & Layout, Karl Blau 'Live from the Void', 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Text Layout 2020">
+        <img class="myImages lazy" src="./images/img_23.png" alt="Text & Layout, Kath Bloom 'Bye Bye These Are the Days', 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2021">
+        <img class="myImages lazy" src="./images/img_24.png" alt="Poster, Kath Bloom and Karl Blau, 2021">
+     </div>
+  
+      <div class="filterme" data-filter=" All Advertisement 2020">
+        <img class="myImages lazy" src="./images/img_25.png" alt="Advertisement, Lindsay Reamer 'Lucky' EP, 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Advertisement 2020">
+        <img class="myImages lazy" src="./images/img_26.png" alt="Advertisement, Lindsay Reamer 'Lucky' EP, 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Advertisement 2020">
+        <img class="myImages lazy" src="./images/img_27.png" alt="Advertisement, Lindsay Reamer 'Lucky' EP, 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Text Layout 2020">
+        <img class="myImages lazy" src="./images/img_28.png" alt="Text & Layout, Lindsay Reamer 'Lucky' EP, 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Text Layout 2021">
+        <img class="myImages lazy" src="./images/img_29.png" alt="Text & Layout, Dan Wriggins 'Mr. Chill' EP, 2021">
+      </div>
+  
+      <div class="filterme" data-filter=" All Art 2020">
+        <img class="myImages lazy" src="./images/img_30.png" alt="Album Art, Wes Tirey 'The Midwest Book of the Dead', 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Art 2021">
+        <img class="myImages lazy" src="./images/img_31.png" alt="Album Art, Enchanted Forest Research, 2021">
+      </div>
+      <div class="filterme" data-filter=" All Layout 2021">
+        <img class="myImages lazy" src="./images/img_32.png" alt="Layout, DLR Bootleg Cassette Series, 2021">
+      </div>
+  
+      <div class="filterme" data-filter=" All Layout 2020">
+        <img class="myImages lazy" src="./images/img_33.png" alt="Layout, Wes Tirey 'The Midwest Book of the Dead', 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Art 2022">
+        <img class="myImages lazy" src="./images/img_34.png" alt="Album Art, Texas Gold Compilation, 2022">
+      </div>
+  
+      <div class="filterme" data-filter=" All Layout 2020">
+        <img class="myImages lazy" src="./images/img_35.png" alt="Book Layout, Wes Tirey 'The Midwest Book of the Dead', 2020">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2021">
+        <img class="myImages lazy" src="./images/img_36.png" alt="Poster, Without A Net (Dear Life Records) youtube stream, 2021">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2021">
+        <img class="myImages lazy" src="./images/img_37.png" alt="Poster, Without A Net (Dear Life Records) youtube stream, 2021">
+     </div>
+  
+      <div class="filterme" data-filter=" All Poster 2021">
+        <img class="myImages lazy" src="./images/img_38.png" alt="Poster, Without A Net (Dear Life Records) youtube stream, 2021">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2019">
+        <img class="myImages lazy" src="./images/img_39.png" alt="Poster, Yowler, Fall Tour, 2019">
+      </div>
+  
+      <div class="filterme" data-filter=" All Poster 2020">
+        <img class="myImages lazy" src="./images/img_40.png" alt="Poster, JR Samuels 'Hand Like God' Release stream, 2020">
+      </div>
+  
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+          <div class="imgWithCaption">
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+      </div>
+  
+    </div>
   </div>
-  <br />
-  
-  <!-- new Car 2 -->
-  
-  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="BMW Layout 2020">
-      <strong>BMW 118i</strong><br />
-      BMW Compact red white
-  </div>
-  <br />
-  
-  <!-- new Car 3 -->
-  
-  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="Audi Poster Art 2021">
-      <strong>Audi A4</strong><br />
-      Audi Limousine Sport silver blue red
-  </div>
-  <br />
-  
-  <!-- new Car 4 -->
-  
-  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="BMW SUV Advertisement 2019">
-      <strong>BMW X3</strong><br />
-      BMW SUV Sport white blue silver
-  </div>
-  <br />
-  
-  <!-- new Car 5 -->
-  
-  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="Audi Poster Layout 2022">
-      <strong>Audi R8</strong><br />
-      Audi Sport Silver
-  </div>
-  <br />
-  
-  <!-- new Car 6 -->
-  
-  <div style="border-top: 1px dotted black; padding: 3px; width: 620px" class="filterme" data-filter="BMW Art Layout 2020">
-      <strong>BMW Concept X</strong><br />
-      BMW Sport white silver blue
-  </div>
-  <br />
+  <img class="orange" src="./images/orange.svg" alt="an orange line" />
+  <footer>
+    © 2019-2022 Jon S. Express.&nbsp;&nbsp;<a href="https://clem.today">Development</a>
+  </footer>
 
   <script src="/app.js"></script>
 </body>
