@@ -235,9 +235,11 @@ footer {
 
 .imgWithCaption {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 2px solid black;
-  width: 70%;
+  width: 80%;
   margin: 0 100px;
   padding: 10px;
   background-color: white;
@@ -247,8 +249,8 @@ footer {
 .modal-content {
   /* margin: auto; */
   /* display: block; */
-  width: 80%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 700px;
   /* border: 1px solid green; */
 }
 
@@ -256,13 +258,12 @@ footer {
   /* margin: auto; */
   /* display: block; */
   /* width: 80%; */
-  max-width: 500px;
+  /* max-width: 500px; */
   text-align: left;
   color: rgb(0, 0, 0);
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 10px 10px;
   margin: 10px 10px;
-  height: 150px;
 }
 
 
@@ -299,7 +300,7 @@ footer {
   cursor: pointer;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
 
   body {
     width: 100vw;
